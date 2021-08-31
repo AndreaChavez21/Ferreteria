@@ -17,7 +17,7 @@ namespace Capa_Datos
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand cmd = new SqlCommand();
-        //mostrar datos
+        //mostrar datos 1
        public DataTable mostrar_usuario()
         {
             //proc.almacenados
