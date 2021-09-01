@@ -31,19 +31,22 @@ namespace Capa_Datos
             return tabla;
 
         }
-        /*public DataTable insertar(string nombre, string cedula, string nick, string passw, string dire, string correo)
+        public DataTable insertar(string nombre, string cedula, string nick, string pass, string dire, string correo)
         {
             cmd.Connection = cn.abrir_conexion();
             cmd.CommandText = "InsertarUsuario";
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
-            cmd.Parameters.AddWithValue("",);
+            cmd.Parameters.AddWithValue("usu_nombre",nombre);
+            cmd.Parameters.AddWithValue("usu_cedula",cedula);
+            cmd.Parameters.AddWithValue("usu_nickname",nick);
+            cmd.Parameters.AddWithValue("usu_password",pass);
+            cmd.Parameters.AddWithValue("usu_direccion",dire);
+            cmd.Parameters.AddWithValue("usu_correo",correo);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            cn.cerrar_conexion();
+            
 
-        }*/
+        }
     }
 }

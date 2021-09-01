@@ -56,8 +56,8 @@ namespace Ferreteria
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_regresar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_regresara = new System.Windows.Forms.Button();
+            this.btn_salira = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -317,34 +317,34 @@ namespace Ferreteria
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_regresar);
-            this.panel4.Controls.Add(this.btn_salir);
+            this.panel4.Controls.Add(this.btn_regresara);
+            this.panel4.Controls.Add(this.btn_salira);
             this.panel4.Location = new System.Drawing.Point(10, 440);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(653, 50);
             this.panel4.TabIndex = 3;
             // 
-            // btn_regresar
+            // btn_regresara
             // 
-            this.btn_regresar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_regresar.Location = new System.Drawing.Point(412, 9);
-            this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(130, 31);
-            this.btn_regresar.TabIndex = 1;
-            this.btn_regresar.Text = "REGRESAR";
-            this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresara_Click);
+            this.btn_regresara.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_regresara.Location = new System.Drawing.Point(412, 9);
+            this.btn_regresara.Name = "btn_regresara";
+            this.btn_regresara.Size = new System.Drawing.Size(130, 31);
+            this.btn_regresara.TabIndex = 1;
+            this.btn_regresara.Text = "REGRESAR";
+            this.btn_regresara.UseVisualStyleBackColor = true;
+            this.btn_regresara.Click += new System.EventHandler(this.btn_regresara_Click);
             // 
-            // btn_salir
+            // btn_salira
             // 
-            this.btn_salir.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(149, 9);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(130, 31);
-            this.btn_salir.TabIndex = 0;
-            this.btn_salir.Text = "SALIR";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salira_Click);
+            this.btn_salira.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salira.Location = new System.Drawing.Point(149, 9);
+            this.btn_salira.Name = "btn_salira";
+            this.btn_salira.Size = new System.Drawing.Size(130, 31);
+            this.btn_salira.TabIndex = 0;
+            this.btn_salira.Text = "SALIR";
+            this.btn_salira.UseVisualStyleBackColor = true;
+            this.btn_salira.Click += new System.EventHandler(this.btn_salira_Click);
             // 
             // Crud_Usuario
             // 
@@ -358,6 +358,7 @@ namespace Ferreteria
             this.Name = "Crud_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crud_Usuario";
+            this.Load += new System.EventHandler(this.Crud_Usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -398,7 +399,7 @@ namespace Ferreteria
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_usuario;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.Button btn_salira;
+        private System.Windows.Forms.Button btn_regresara;
     }
 }
