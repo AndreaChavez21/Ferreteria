@@ -23,5 +23,18 @@ namespace Ferreteria
             new Admin().ShowDialog();
             this.Close();
         }
+
+        private void btn_bregresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Admin().ShowDialog();
+            this.Close();
+        }
+
+        private void btn_bsalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
     }
 }

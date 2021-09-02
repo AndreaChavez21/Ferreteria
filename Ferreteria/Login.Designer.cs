@@ -58,9 +58,9 @@ namespace Ferreteria
             this.panel1.Controls.Add(this.txt_nombre);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-5, 1);
+            this.panel1.Location = new System.Drawing.Point(-5, -6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(498, 431);
+            this.panel1.Size = new System.Drawing.Size(498, 438);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

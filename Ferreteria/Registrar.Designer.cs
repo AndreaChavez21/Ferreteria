@@ -31,8 +31,6 @@ namespace Ferreteria
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_passu = new System.Windows.Forms.TextBox();
             this.txt_nicku = new System.Windows.Forms.TextBox();
             this.txt_cedulau = new System.Windows.Forms.TextBox();
@@ -44,6 +42,8 @@ namespace Ferreteria
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_bguardar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_bcancelar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +51,8 @@ namespace Ferreteria
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.btn_cancelar);
-            this.panel1.Controls.Add(this.btn_guardar);
+            this.panel1.Controls.Add(this.btn_bcancelar);
+            this.panel1.Controls.Add(this.btn_bguardar);
             this.panel1.Controls.Add(this.txt_passu);
             this.panel1.Controls.Add(this.txt_nicku);
             this.panel1.Controls.Add(this.txt_cedulau);
@@ -68,28 +68,6 @@ namespace Ferreteria
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 395);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btn_cancelar.Location = new System.Drawing.Point(260, 339);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(110, 27);
-            this.btn_cancelar.TabIndex = 13;
-            this.btn_cancelar.Text = "CANCELAR";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btn_guardar.Location = new System.Drawing.Point(101, 339);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(110, 27);
-            this.btn_guardar.TabIndex = 12;
-            this.btn_guardar.Text = "GUARDAR";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // txt_passu
             // 
@@ -195,6 +173,58 @@ namespace Ferreteria
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_bguardar
+            // 
+            this.btn_bguardar.ActiveBorderThickness = 1;
+            this.btn_bguardar.ActiveCornerRadius = 20;
+            this.btn_bguardar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_bguardar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_bguardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bguardar.BackgroundImage")));
+            this.btn_bguardar.ButtonText = "GUARDAR";
+            this.btn_bguardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bguardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bguardar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.IdleBorderThickness = 1;
+            this.btn_bguardar.IdleCornerRadius = 20;
+            this.btn_bguardar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_bguardar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.Location = new System.Drawing.Point(52, 320);
+            this.btn_bguardar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_bguardar.Name = "btn_bguardar";
+            this.btn_bguardar.Size = new System.Drawing.Size(126, 41);
+            this.btn_bguardar.TabIndex = 14;
+            this.btn_bguardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_bguardar.Click += new System.EventHandler(this.btn_bguardar_Click);
+            // 
+            // btn_bcancelar
+            // 
+            this.btn_bcancelar.ActiveBorderThickness = 1;
+            this.btn_bcancelar.ActiveCornerRadius = 20;
+            this.btn_bcancelar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_bcancelar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_bcancelar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bcancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_bcancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bcancelar.BackgroundImage")));
+            this.btn_bcancelar.ButtonText = "CANCELAR";
+            this.btn_bcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bcancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bcancelar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_bcancelar.IdleBorderThickness = 1;
+            this.btn_bcancelar.IdleCornerRadius = 20;
+            this.btn_bcancelar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_bcancelar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_bcancelar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bcancelar.Location = new System.Drawing.Point(268, 320);
+            this.btn_bcancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_bcancelar.Name = "btn_bcancelar";
+            this.btn_bcancelar.Size = new System.Drawing.Size(142, 41);
+            this.btn_bcancelar.TabIndex = 15;
+            this.btn_bcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_bcancelar.Click += new System.EventHandler(this.btn_bcancelar_Click);
+            // 
             // Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,8 +245,6 @@ namespace Ferreteria
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.TextBox txt_passu;
         private System.Windows.Forms.TextBox txt_nicku;
         private System.Windows.Forms.TextBox txt_nombreu;
@@ -228,5 +256,7 @@ namespace Ferreteria
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_cedulau;
         private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_bguardar;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_bcancelar;
     }
 }

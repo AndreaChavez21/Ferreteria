@@ -29,15 +29,7 @@ namespace Ferreteria
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_pass.Text))
-            {
-                MessageBox.Show("Por favor ingrese todos los datos");
-
-            }
-            else
-            {
-                logear(txt_nombre.Text, txt_pass.Text);
-            }
+            
         }
 
         private void Limpiar1()
@@ -89,7 +81,7 @@ namespace Ferreteria
                         if (contador > 2)
                         {
                             con.Open();
-                            SqlCommand cmd2 = new SqlCommand("select * from Tbl_usuario where usu_nomlogin = @nom and usu_estado = 'A'", con);
+                            SqlCommand cmd2 = new SqlCommand("select * from Tbl_Usuario where usu_nomlogin = @nom and usu_estado = 'A'", con);
                             cmd2.Parameters.AddWithValue("nom", nombre);
                             SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
                             DataTable dt2 = new DataTable();
@@ -98,7 +90,7 @@ namespace Ferreteria
                             if (dt2.Rows.Count == 1)
                             {
                                 con.Open();
-                                SqlCommand cmd3 = new SqlCommand("UPDATE Tbl_usuario SET usu_estado = 'B' WHERE usu_nomlogin = @nom", con);
+                                SqlCommand cmd3 = new SqlCommand("UPDATE Tbl_Usuario SET usu_estado = 'B' WHERE usu_nomlogin = @nom", con);
                                 cmd3.Parameters.AddWithValue("nom", nombre);
                                 SqlDataAdapter sda3 = new SqlDataAdapter(cmd3);
                                 DataTable dt3 = new DataTable();

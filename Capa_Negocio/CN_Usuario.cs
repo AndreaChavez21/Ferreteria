@@ -19,5 +19,11 @@ namespace Capa_Negocio
             return tabla;
 
         }
+
+        public void insertarU(string nombre, string cedula, string nick, string pass, string dire, string correo)
+        {
+            objetoCD.insertar(nombre, cedula, nick, pass, dire, correo);
+
+        }
     }
 }

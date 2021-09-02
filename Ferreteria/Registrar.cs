@@ -93,6 +93,26 @@ namespace Ferreteria
         {
             /*cargartu();*/
         }
-        
+
+        private void btn_bguardar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_nombreu.Text) || string.IsNullOrEmpty(txt_passu.Text) || string.IsNullOrEmpty(txt_cedulau.Text) || string.IsNullOrEmpty(txt_nicku.Text) || string.IsNullOrEmpty(txt_passu.Text))
+            {
+                MessageBox.Show("Ingresar todos los datos");
+                Limpiar();
+
+            }
+            else
+            {
+                registro();
+            }
+        }
+
+        private void btn_bcancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().ShowDialog();
+            this.Close();
+        }
     }
 }
