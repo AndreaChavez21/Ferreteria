@@ -35,15 +35,15 @@ namespace Ferreteria
             this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_passu = new System.Windows.Forms.TextBox();
             this.txt_nicku = new System.Windows.Forms.TextBox();
+            this.txt_cedulau = new System.Windows.Forms.TextBox();
             this.txt_nombreu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_cedulau = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,14 @@ namespace Ferreteria
             this.txt_nicku.Size = new System.Drawing.Size(208, 25);
             this.txt_nicku.TabIndex = 10;
             // 
+            // txt_cedulau
+            // 
+            this.txt_cedulau.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.txt_cedulau.Location = new System.Drawing.Point(202, 167);
+            this.txt_cedulau.Name = "txt_cedulau";
+            this.txt_cedulau.Size = new System.Drawing.Size(208, 25);
+            this.txt_cedulau.TabIndex = 9;
+            // 
             // txt_nombreu
             // 
             this.txt_nombreu.Font = new System.Drawing.Font("Century Gothic", 11F);
@@ -146,6 +154,17 @@ namespace Ferreteria
             this.label4.TabIndex = 4;
             this.label4.Text = "Nickname:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(48, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Cédula:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -176,25 +195,6 @@ namespace Ferreteria
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Cédula:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txt_cedulau
-            // 
-            this.txt_cedulau.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.txt_cedulau.Location = new System.Drawing.Point(202, 167);
-            this.txt_cedulau.Name = "txt_cedulau";
-            this.txt_cedulau.Size = new System.Drawing.Size(208, 25);
-            this.txt_cedulau.TabIndex = 9;
-            // 
             // Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +204,7 @@ namespace Ferreteria
             this.Name = "Registrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "pic";
+            this.Load += new System.EventHandler(this.Registrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

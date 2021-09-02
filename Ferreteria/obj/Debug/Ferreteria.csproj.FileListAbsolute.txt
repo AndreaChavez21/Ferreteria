@@ -18,3 +18,4 @@ C:\Users\Usuario\source\repos\Cuarto_APV\Ferreteria\Ferreteria\bin\Debug\Capa_Da
 C:\Users\Usuario\source\repos\Cuarto_APV\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Admin.resources
 C:\Users\Usuario\source\repos\Cuarto_APV\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Crud_Usuario.resources
 C:\Users\Usuario\source\repos\Cuarto_APV\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Crud_Producto.resources
+C:\Users\Usuario\source\repos\Cuarto_APV\Ferreteria\Ferreteria\bin\Debug\Bunifu_UI_v1.52.dll

@@ -32,11 +32,13 @@ namespace Ferreteria
 
             dt.Columns.Add("tusu_id", typeof(int));
             dt.Columns.Add("tusu_nombre", typeof(string));
-            dt.Rows.Add(0, "Seleccione");
+           
             sda.Fill(dt);
             con.Close();
+            
 
-   
+
+
         }
         private void registro()
         {
@@ -86,5 +88,11 @@ namespace Ferreteria
             new Login().ShowDialog();
             this.Close();
         }
+        
+        private void Registrar_Load(object sender, EventArgs e)
+        {
+            /*cargartu();*/
+        }
+        
     }
 }

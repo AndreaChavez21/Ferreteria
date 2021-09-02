@@ -142,5 +142,24 @@ namespace Ferreteria
             new Registrar().ShowDialog();
             this.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bnt_bingresar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_pass.Text))
+            {
+                MessageBox.Show("Por favor ingrese todos los datos");
+
+            }
+            else
+            {
+                logear(txt_nombre.Text, txt_pass.Text);
+            }
+        }
     }
-}
+    }
+

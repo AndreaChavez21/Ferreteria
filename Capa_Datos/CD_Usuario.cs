@@ -31,7 +31,7 @@ namespace Capa_Datos
             return tabla;
 
         }
-        public DataTable insertar(string nombre, string cedula, string nick, string pass, string dire, string correo)
+        /*public DataTable insertar(string nombre, string cedula, string nick, string pass, string dire, string correo)
         {
             cmd.Connection = cn.abrir_conexion();
             cmd.CommandText = "InsertarUsuario";
@@ -48,5 +48,6 @@ namespace Capa_Datos
             
 
         }
+        */
     }
 }

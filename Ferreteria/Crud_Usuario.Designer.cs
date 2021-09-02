@@ -38,8 +38,6 @@ namespace Ferreteria
             this.txt_dire = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmb_usuario = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,8 +74,6 @@ namespace Ferreteria
             this.panel1.Controls.Add(this.txt_dire);
             this.panel1.Controls.Add(this.txt_pass);
             this.panel1.Controls.Add(this.txt_nombre);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.cmb_usuario);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -147,25 +143,6 @@ namespace Ferreteria
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(233, 26);
             this.txt_nombre.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(77, 239);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Rol:";
-            // 
-            // cmb_usuario
-            // 
-            this.cmb_usuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_usuario.FormattingEnabled = true;
-            this.cmb_usuario.Location = new System.Drawing.Point(186, 239);
-            this.cmb_usuario.Name = "cmb_usuario";
-            this.cmb_usuario.Size = new System.Drawing.Size(121, 28);
-            this.cmb_usuario.TabIndex = 7;
             // 
             // label8
             // 
@@ -380,8 +357,6 @@ namespace Ferreteria
         private System.Windows.Forms.TextBox txt_dire;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmb_usuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
