@@ -12,18 +12,18 @@ namespace Capa_Negocio
 {
     public class CN_Producto
     {
-        private CD_Producto objetoCD = new CD_Producto();
+        private CD_Producto objetopCD = new CD_Producto();
         public DataTable trae_producto()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCD.mostrar_producto();
+            tabla = objetopCD.mostrar_producto();
             return tabla;
 
         }
 
         public void insertarP(string nombre, string codigo, string cantidad, string precio ,  string fecha, PictureBox imagen)
         {
-            objetoCD.Insertar_producto(nombre,codigo, cantidad, precio, Convert.ToDateTime(fecha),imagen);
+            objetopCD.Insertar_producto(nombre,codigo, cantidad, precio, Convert.ToDateTime(fecha),imagen);
 
         }
     }

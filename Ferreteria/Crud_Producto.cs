@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Negocio;
-
 namespace Ferreteria
 {
     public partial class Crud_Producto : Form
@@ -82,8 +81,9 @@ namespace Ferreteria
         private void mostrar_producto()
 
         {
-            CN_Usuario objetop = new CN_Usuario();
-            dgv_producto.DataSource = objetop.trae_producto();
+            CN_Producto objetopr = new CN_Producto();
+
+            dgv_producto.DataSource = objetopr.trae_producto();
         }
     }
 }

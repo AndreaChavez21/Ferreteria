@@ -16,15 +16,15 @@ namespace Capa_Datos
         //propiedades de sql
         SqlDataReader leer;
         DataTable tabla = new DataTable();
-        SqlCommand cmd = new SqlCommand();
+        SqlCommand cmdp = new SqlCommand();
 
         public DataTable mostrar_producto()
         {
             //proc.almacenados
-            cmd.Connection = cn.abrir_conexion();
-            cmd.CommandText = "MostrarProducto";
-            cmd.CommandType = CommandType.StoredProcedure;
-            leer = cmd.ExecuteReader();
+            cmdp.Connection = cn.abrir_conexion();
+            cmdp.CommandText = "MostrarProducto";
+            cmdp.CommandType = CommandType.StoredProcedure;
+            leer = cmdp.ExecuteReader();
             tabla.Load(leer);
             cn.cerrar_conexion();
 
@@ -34,16 +34,20 @@ namespace Capa_Datos
 
         public DataTable Insertar_producto(string nombre, string codigo, string cantidad, string precio, DateTime fecha, PictureBox image)
         {
-            cmd.Connection = cn.abrir_conexion();
-            cmd.CommandText = "InsertarProducto";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("pro_nombre", nombre);
-            cmd.Parameters.AddWithValue("pro_codigo", codigo);
-            cmd.Parameters.AddWithValue("pro_cantidad", cantidad);
-            cmd.Parameters.AddWithValue("pro_precio", precio);
-            cmd.Parameters.AddWithValue("pro_fecha", fecha);
+            cmdp.Connection = cn.abrir_conexion();
+            cmdp.CommandText = "InsertarProducto";
+            cmdp.CommandType = CommandType.StoredProcedure;
+            cmdp.Parameters.AddWithValue("pro_nombre", nombre);
+            cmdp.Parameters.AddWithValue("pro_codigo", codigo);
+            cmdp.Parameters.AddWithValue("pro_cantidad", cantidad);
+            cmdp.Parameters.AddWithValue("pro_precio", precio);
+            cmdp.Parameters.AddWithValue("pro_fecha", fecha);
 
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
+
+            cmdp.ExecuteNonQuery();
+            cmdp.Parameters.Clear();
+            cn.cerrar_conexion();
 
             return tabla;
 
