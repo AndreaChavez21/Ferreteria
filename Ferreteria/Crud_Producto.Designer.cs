@@ -31,6 +31,8 @@ namespace Ferreteria
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crud_Producto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_bsalir = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_bregresar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgv_producto = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -47,13 +49,12 @@ namespace Ferreteria
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pic_prodcuto = new System.Windows.Forms.PictureBox();
-            this.btn_bguardar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_beliminar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_beditar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_bregresar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_bsalir = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_cargar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_beditar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_beliminar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_bguardar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pic_prodcuto = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_producto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,6 +72,58 @@ namespace Ferreteria
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(752, 123);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_bsalir
+            // 
+            this.btn_bsalir.ActiveBorderThickness = 1;
+            this.btn_bsalir.ActiveCornerRadius = 20;
+            this.btn_bsalir.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_bsalir.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_bsalir.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bsalir.BackColor = System.Drawing.Color.White;
+            this.btn_bsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bsalir.BackgroundImage")));
+            this.btn_bsalir.ButtonText = "Salir";
+            this.btn_bsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bsalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bsalir.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_bsalir.IdleBorderThickness = 1;
+            this.btn_bsalir.IdleCornerRadius = 20;
+            this.btn_bsalir.IdleFillColor = System.Drawing.Color.White;
+            this.btn_bsalir.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_bsalir.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bsalir.Location = new System.Drawing.Point(9, 59);
+            this.btn_bsalir.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_bsalir.Name = "btn_bsalir";
+            this.btn_bsalir.Size = new System.Drawing.Size(125, 44);
+            this.btn_bsalir.TabIndex = 8;
+            this.btn_bsalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_bsalir.Click += new System.EventHandler(this.btn_bsalir_Click);
+            // 
+            // btn_bregresar
+            // 
+            this.btn_bregresar.ActiveBorderThickness = 1;
+            this.btn_bregresar.ActiveCornerRadius = 20;
+            this.btn_bregresar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_bregresar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_bregresar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bregresar.BackColor = System.Drawing.Color.White;
+            this.btn_bregresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bregresar.BackgroundImage")));
+            this.btn_bregresar.ButtonText = "Regresar";
+            this.btn_bregresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bregresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bregresar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_bregresar.IdleBorderThickness = 1;
+            this.btn_bregresar.IdleCornerRadius = 20;
+            this.btn_bregresar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_bregresar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_bregresar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bregresar.Location = new System.Drawing.Point(9, 5);
+            this.btn_bregresar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_bregresar.Name = "btn_bregresar";
+            this.btn_bregresar.Size = new System.Drawing.Size(125, 44);
+            this.btn_bregresar.TabIndex = 7;
+            this.btn_bregresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_bregresar.Click += new System.EventHandler(this.btn_bregresar_Click);
             // 
             // dgv_producto
             // 
@@ -101,6 +154,7 @@ namespace Ferreteria
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 405);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dateTimePicker1
             // 
@@ -234,63 +288,30 @@ namespace Ferreteria
             this.panel3.Size = new System.Drawing.Size(143, 405);
             this.panel3.TabIndex = 2;
             // 
-            // pic_prodcuto
+            // btn_cargar
             // 
-            this.pic_prodcuto.Location = new System.Drawing.Point(14, 195);
-            this.pic_prodcuto.Name = "pic_prodcuto";
-            this.pic_prodcuto.Size = new System.Drawing.Size(118, 118);
-            this.pic_prodcuto.TabIndex = 3;
-            this.pic_prodcuto.TabStop = false;
-            // 
-            // btn_bguardar
-            // 
-            this.btn_bguardar.ActiveBorderThickness = 1;
-            this.btn_bguardar.ActiveCornerRadius = 20;
-            this.btn_bguardar.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_bguardar.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_bguardar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bguardar.BackColor = System.Drawing.Color.White;
-            this.btn_bguardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bguardar.BackgroundImage")));
-            this.btn_bguardar.ButtonText = "Guardar";
-            this.btn_bguardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bguardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bguardar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_bguardar.IdleBorderThickness = 1;
-            this.btn_bguardar.IdleCornerRadius = 20;
-            this.btn_bguardar.IdleFillColor = System.Drawing.Color.White;
-            this.btn_bguardar.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_bguardar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bguardar.Location = new System.Drawing.Point(7, 25);
-            this.btn_bguardar.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_bguardar.Name = "btn_bguardar";
-            this.btn_bguardar.Size = new System.Drawing.Size(125, 44);
-            this.btn_bguardar.TabIndex = 4;
-            this.btn_bguardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_beliminar
-            // 
-            this.btn_beliminar.ActiveBorderThickness = 1;
-            this.btn_beliminar.ActiveCornerRadius = 20;
-            this.btn_beliminar.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_beliminar.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_beliminar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_beliminar.BackColor = System.Drawing.Color.White;
-            this.btn_beliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_beliminar.BackgroundImage")));
-            this.btn_beliminar.ButtonText = "Eliminar";
-            this.btn_beliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_beliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_beliminar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_beliminar.IdleBorderThickness = 1;
-            this.btn_beliminar.IdleCornerRadius = 20;
-            this.btn_beliminar.IdleFillColor = System.Drawing.Color.White;
-            this.btn_beliminar.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_beliminar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_beliminar.Location = new System.Drawing.Point(9, 143);
-            this.btn_beliminar.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_beliminar.Name = "btn_beliminar";
-            this.btn_beliminar.Size = new System.Drawing.Size(125, 44);
-            this.btn_beliminar.TabIndex = 5;
-            this.btn_beliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cargar.ActiveBorderThickness = 1;
+            this.btn_cargar.ActiveCornerRadius = 20;
+            this.btn_cargar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_cargar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_cargar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_cargar.BackColor = System.Drawing.Color.White;
+            this.btn_cargar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cargar.BackgroundImage")));
+            this.btn_cargar.ButtonText = "Subir imagen";
+            this.btn_cargar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cargar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cargar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_cargar.IdleBorderThickness = 1;
+            this.btn_cargar.IdleCornerRadius = 20;
+            this.btn_cargar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_cargar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_cargar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_cargar.Location = new System.Drawing.Point(9, 336);
+            this.btn_cargar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_cargar.Name = "btn_cargar";
+            this.btn_cargar.Size = new System.Drawing.Size(125, 44);
+            this.btn_cargar.TabIndex = 9;
+            this.btn_cargar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_beditar
             // 
@@ -317,82 +338,69 @@ namespace Ferreteria
             this.btn_beditar.TabIndex = 6;
             this.btn_beditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_bregresar
+            // btn_beliminar
             // 
-            this.btn_bregresar.ActiveBorderThickness = 1;
-            this.btn_bregresar.ActiveCornerRadius = 20;
-            this.btn_bregresar.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_bregresar.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_bregresar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bregresar.BackColor = System.Drawing.Color.White;
-            this.btn_bregresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bregresar.BackgroundImage")));
-            this.btn_bregresar.ButtonText = "Regresar";
-            this.btn_bregresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bregresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bregresar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_bregresar.IdleBorderThickness = 1;
-            this.btn_bregresar.IdleCornerRadius = 20;
-            this.btn_bregresar.IdleFillColor = System.Drawing.Color.White;
-            this.btn_bregresar.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_bregresar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bregresar.Location = new System.Drawing.Point(9, 5);
-            this.btn_bregresar.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_bregresar.Name = "btn_bregresar";
-            this.btn_bregresar.Size = new System.Drawing.Size(125, 44);
-            this.btn_bregresar.TabIndex = 7;
-            this.btn_bregresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_bregresar.Click += new System.EventHandler(this.btn_bregresar_Click);
+            this.btn_beliminar.ActiveBorderThickness = 1;
+            this.btn_beliminar.ActiveCornerRadius = 20;
+            this.btn_beliminar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_beliminar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_beliminar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_beliminar.BackColor = System.Drawing.Color.White;
+            this.btn_beliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_beliminar.BackgroundImage")));
+            this.btn_beliminar.ButtonText = "Eliminar";
+            this.btn_beliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_beliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_beliminar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_beliminar.IdleBorderThickness = 1;
+            this.btn_beliminar.IdleCornerRadius = 20;
+            this.btn_beliminar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_beliminar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_beliminar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_beliminar.Location = new System.Drawing.Point(9, 143);
+            this.btn_beliminar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_beliminar.Name = "btn_beliminar";
+            this.btn_beliminar.Size = new System.Drawing.Size(125, 44);
+            this.btn_beliminar.TabIndex = 5;
+            this.btn_beliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_bsalir
+            // btn_bguardar
             // 
-            this.btn_bsalir.ActiveBorderThickness = 1;
-            this.btn_bsalir.ActiveCornerRadius = 20;
-            this.btn_bsalir.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_bsalir.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_bsalir.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bsalir.BackColor = System.Drawing.Color.White;
-            this.btn_bsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bsalir.BackgroundImage")));
-            this.btn_bsalir.ButtonText = "Salir";
-            this.btn_bsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bsalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bsalir.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_bsalir.IdleBorderThickness = 1;
-            this.btn_bsalir.IdleCornerRadius = 20;
-            this.btn_bsalir.IdleFillColor = System.Drawing.Color.White;
-            this.btn_bsalir.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_bsalir.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_bsalir.Location = new System.Drawing.Point(9, 59);
-            this.btn_bsalir.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_bsalir.Name = "btn_bsalir";
-            this.btn_bsalir.Size = new System.Drawing.Size(125, 44);
-            this.btn_bsalir.TabIndex = 8;
-            this.btn_bsalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_bsalir.Click += new System.EventHandler(this.btn_bsalir_Click);
+            this.btn_bguardar.ActiveBorderThickness = 1;
+            this.btn_bguardar.ActiveCornerRadius = 20;
+            this.btn_bguardar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_bguardar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.BackColor = System.Drawing.Color.White;
+            this.btn_bguardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bguardar.BackgroundImage")));
+            this.btn_bguardar.ButtonText = "Guardar";
+            this.btn_bguardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bguardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bguardar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.IdleBorderThickness = 1;
+            this.btn_bguardar.IdleCornerRadius = 20;
+            this.btn_bguardar.IdleFillColor = System.Drawing.Color.White;
+            this.btn_bguardar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_bguardar.Location = new System.Drawing.Point(7, 25);
+            this.btn_bguardar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_bguardar.Name = "btn_bguardar";
+            this.btn_bguardar.Size = new System.Drawing.Size(125, 44);
+            this.btn_bguardar.TabIndex = 4;
+            this.btn_bguardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_bguardar.Click += new System.EventHandler(this.btn_bguardar_Click);
             // 
-            // btn_cargar
+            // pic_prodcuto
             // 
-            this.btn_cargar.ActiveBorderThickness = 1;
-            this.btn_cargar.ActiveCornerRadius = 20;
-            this.btn_cargar.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_cargar.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_cargar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_cargar.BackColor = System.Drawing.Color.White;
-            this.btn_cargar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cargar.BackgroundImage")));
-            this.btn_cargar.ButtonText = "Subir imagen";
-            this.btn_cargar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cargar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cargar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_cargar.IdleBorderThickness = 1;
-            this.btn_cargar.IdleCornerRadius = 20;
-            this.btn_cargar.IdleFillColor = System.Drawing.Color.White;
-            this.btn_cargar.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_cargar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_cargar.Location = new System.Drawing.Point(9, 336);
-            this.btn_cargar.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_cargar.Name = "btn_cargar";
-            this.btn_cargar.Size = new System.Drawing.Size(125, 44);
-            this.btn_cargar.TabIndex = 9;
-            this.btn_cargar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pic_prodcuto.Location = new System.Drawing.Point(14, 195);
+            this.pic_prodcuto.Name = "pic_prodcuto";
+            this.pic_prodcuto.Size = new System.Drawing.Size(118, 118);
+            this.pic_prodcuto.TabIndex = 3;
+            this.pic_prodcuto.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Crud_Producto
             // 
@@ -406,6 +414,7 @@ namespace Ferreteria
             this.Name = "Crud_Producto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crud_Producto";
+            this.Load += new System.EventHandler(this.Crud_Producto_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_producto)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -442,5 +451,6 @@ namespace Ferreteria
         private Bunifu.Framework.UI.BunifuThinButton2 btn_bsalir;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_bregresar;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_cargar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

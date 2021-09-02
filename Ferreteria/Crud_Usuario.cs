@@ -45,7 +45,9 @@ namespace Ferreteria
 
         private void mostrar_Usuario()
         {
-            dgv_usuario.DataSource = objetoCN.trae_usuario();
+            CN_Usuario objeto = new CN_Usuario();
+
+            dgv_usuario.DataSource = objeto.trae_usuario();
         }
 
         private void btn_bregresar_Click(object sender, EventArgs e)

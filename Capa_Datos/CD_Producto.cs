@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos
 {
-    class CD_Producto
+    public class CD_Producto
     {
 
         private CD_Conexion cn = new CD_Conexion();

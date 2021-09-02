@@ -52,9 +52,9 @@ namespace Ferreteria
                 if (dt.Rows.Count == 1)
                 {
                     con.Open();
-                    SqlCommand cmd1 = new SqlCommand("select usu_nombre, tusu_id from Tbl_Usuario where usu_nomlogin = @nom and usu_password = @pas and usu_estado = 'A'", con);
+                    SqlCommand cmd1 = new SqlCommand("select usu_nombre, tusu_id from Tbl_Usuario where usu_nomlogin = @nom and usu_password = @pass and usu_estado = 'A'", con);
                     cmd1.Parameters.AddWithValue("nom", nombre);
-                    cmd1.Parameters.AddWithValue("pas", pass);
+                    cmd1.Parameters.AddWithValue("pass", pass);
                     SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
                     DataTable dt1 = new DataTable();
                     sda1.Fill(dt1);
